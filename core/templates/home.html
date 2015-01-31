@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Home Page</h1>
+  <p>Here are the time entries</p>
+  <ul>
+    {% for entry in entries %}
+      <li><a href="/entries/{{entry.id}}">{{ entry.description }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
